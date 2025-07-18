@@ -1,0 +1,90 @@
+[
+  {
+    "Id": 1,
+    "title": "Review quarterly reports",
+    "description": "Analyze Q3 performance metrics and prepare presentation slides for the board meeting",
+    "categoryId": "1",
+    "priority": "high",
+    "dueDate": "2024-12-20T09:00:00Z",
+    "completed": false,
+    "createdAt": "2024-12-15T10:30:00Z",
+    "completedAt": null
+  },
+  {
+    "Id": 2,
+    "title": "Client meeting preparation",
+    "description": "Prepare proposal and demo materials for the new client presentation",
+    "categoryId": "1",
+    "priority": "high",
+    "dueDate": "2024-12-19T14:00:00Z",
+    "completed": false,
+    "createdAt": "2024-12-15T11:15:00Z",
+    "completedAt": null
+  },
+  {
+    "Id": 3,
+    "title": "Code review for feature branch",
+    "description": "Review pull requests for the authentication module implementation",
+    "categoryId": "2",
+    "priority": "medium",
+    "dueDate": "2024-12-18T16:00:00Z",
+    "completed": false,
+    "createdAt": "2024-12-15T12:00:00Z",
+    "completedAt": null
+  },
+  {
+    "Id": 4,
+    "title": "Weekly team standup",
+    "description": "Participate in the weekly team sync and project status updates",
+    "categoryId": "1",
+    "priority": "medium",
+    "dueDate": "2024-12-17T10:00:00Z",
+    "completed": true,
+    "createdAt": "2024-12-15T08:00:00Z",
+    "completedAt": "2024-12-17T10:30:00Z"
+  },
+  {
+    "Id": 5,
+    "title": "Update project documentation",
+    "description": "Refresh API documentation and add new endpoint specifications",
+    "categoryId": "2",
+    "priority": "low",
+    "dueDate": "2024-12-22T17:00:00Z",
+    "completed": false,
+    "createdAt": "2024-12-15T13:45:00Z",
+    "completedAt": null
+  },
+  {
+    "Id": 6,
+    "title": "Grocery shopping",
+    "description": "Buy ingredients for the weekend dinner party",
+    "categoryId": "3",
+    "priority": "medium",
+    "dueDate": "2024-12-18T18:00:00Z",
+    "completed": false,
+    "createdAt": "2024-12-15T14:20:00Z",
+    "completedAt": null
+  },
+  {
+    "Id": 7,
+    "title": "Gym workout",
+    "description": "Upper body strength training session",
+    "categoryId": "4",
+    "priority": "low",
+    "dueDate": "2024-12-17T19:00:00Z",
+    "completed": true,
+    "createdAt": "2024-12-15T15:00:00Z",
+    "completedAt": "2024-12-17T20:15:00Z"
+  },
+  {
+    "Id": 8,
+    "title": "Call insurance company",
+    "description": "Inquire about policy renewal and coverage options",
+    "categoryId": "3",
+    "priority": "high",
+    "dueDate": "2024-12-19T11:00:00Z",
+    "completed": false,
+    "createdAt": "2024-12-15T16:30:00Z",
+    "completedAt": null
+  }
+]
