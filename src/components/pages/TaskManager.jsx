@@ -1,10 +1,13 @@
-import React, { useState, useCallback } from "react";
+import React, { useCallback, useContext, useState } from "react";
 import { motion } from "framer-motion";
-import TaskHeader from "@/components/organisms/TaskHeader";
+import { useSelector } from "react-redux";
+import { AuthContext } from "../../App";
+import ApperIcon from "@/components/ApperIcon";
 import TaskFilters from "@/components/organisms/TaskFilters";
-import TaskList from "@/components/organisms/TaskList";
 import TaskForm from "@/components/organisms/TaskForm";
-
+import TaskList from "@/components/organisms/TaskList";
+import TaskHeader from "@/components/organisms/TaskHeader";
+import Button from "@/components/atoms/Button";
 const TaskManager = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState({ Id: "all", name: "All Categories", color: "#6B7280", icon: "Grid3x3" });
@@ -64,7 +67,10 @@ const TaskManager = () => {
 
   const handleRefresh = () => {
     setRefreshTrigger(prev => prev + 1);
-  };
+};
+
+  const { user } = useSelector((state) => state.user);
+  const { logout } = useContext(AuthContext);
 
   return (
     <div className="min-h-screen bg-surface-100">
@@ -75,6 +81,30 @@ const TaskManager = () => {
           transition={{ duration: 0.5 }}
           className="space-y-6"
         >
+          {/* User info and logout button */}
+          <div className="flex items-center justify-between bg-white rounded-xl shadow-card p-4">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 bg-gradient-to-r from-primary-500 to-primary-600 rounded-full flex items-center justify-center text-white font-semibold">
+                {user?.firstName?.[0] || user?.emailAddress?.[0] || 'U'}
+              </div>
+              <div>
+                <p className="font-medium text-gray-900">
+                  {user?.firstName && user?.lastName ? `${user.firstName} ${user.lastName}` : user?.emailAddress || 'User'}
+                </p>
+                <p className="text-sm text-gray-500">{user?.emailAddress}</p>
+              </div>
+            </div>
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={logout}
+              className="gap-2"
+            >
+              <ApperIcon name="LogOut" className="h-4 w-4" />
+              Logout
+            </Button>
+          </div>
+
           <TaskHeader 
             onCreateTask={handleCreateTask}
             onRefresh={handleRefresh}
